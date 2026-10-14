@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPay - 残高を受け取る</title>
+    
+    <!-- LINEで共有された時のプレビュー（カード表示）設定 -->
+    <meta property="og:title" content="[PayPay] 受け取りリンクが届きました">
+    <meta property="og:description" content="2026/10/15 15:57までにリンクからPayPay残高の受け取りを完了してください">
+    <meta property="og:image" content="https://placehold.jp/1200x630.png?text=PayPay+残高受け取り"> <!-- ここをPayPayっぽいサムネイル画像に変えるとさらにリアルになります -->
+    <meta property="og:type" content="website">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <!-- 準備したMP4動画を自動再生する設定 -->
+    <video src="takasu.mp4" autoplay playsinline controls></video>
+
+    <script>
+        const video = document.querySelector('video');
+        video.play().catch(() => {
+            video.muted = true;
+            video.play();
+        });
+    </script>
+</body>
+</html>
